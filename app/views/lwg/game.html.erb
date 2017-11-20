@@ -1,9 +1,11 @@
-<% grid.each do |letter|%>
+<% @grid.each do |letter|%>
   <li style="display: inline-block;"> <%= letter %></li>
 <% end %>
 
 <form action="/score">
   <label for="attempt">Enter your answer here</label>
   <input type="text" placeholder="enter your answer" id="attempt" name="attempt">
+  <input type="hidden" name="start_time" value="<%= @start_time %>">
+  <input type="hidden" name="grid_string" value="<%= @grid.join("") %>">
   <input type="submit">
 </form>
