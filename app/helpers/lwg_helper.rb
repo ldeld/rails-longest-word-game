@@ -1,0 +1,2 @@
+module LwgHelper
+end
